@@ -101,8 +101,11 @@ bool game::fullBoard()
 int game::restart()
 {
 	int res;
+dumb:	
 	std::cout << "\nDo you want to restart the game? [1] YES / NO [2] : ";
 	std::cin >> res;
+	if(res<1 || res>2)
+		goto dumb;
 	if (res == 1)
 	{
 		for (int i = 0; i < height; i++)
